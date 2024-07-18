@@ -277,9 +277,9 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry):
 
 
 async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry):
-    if not await hass.config_entries.async_unload_platforms(entry, _PLATFORMS):
-        return False
+#    if not await hass.config_entries.async_unload_platforms(entry, _PLATFORMS):
+#        return False
 
-    client: HassioEcoFlowClient = hass.data[DOMAIN].pop(entry.entry_id)
-    await client.close()
+ #   client: HassioEcoFlowClient = hass.data[DOMAIN].pop(entry.entry_id)
+ #   await client.close()
     return True
